@@ -4,6 +4,24 @@
 <title>Greg's Gambits</title>
 <link href="greg.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+  function getName(){
+    var name = prompt("Please enter your name", " ");
+    document.getElementById('myname').innerHTML = name;
+  }
+  function userName(){
+    var username = prompt("Enter a username", "")
+    document.getElementById('myUsername').innerHTML = username
+  }
+  function seeAvatar(){
+    window.open('avatars.html')
+  }
+  function selectAvatar(){
+    var avatar = prompt("Enter the avatar you want", "")
+    document.getElementById('avatar').innerHTML = avatar
+  }
+
+</script>
 </head>
 <body>
 <div id="container">
@@ -23,7 +41,14 @@
   <a href="aboutyou.html">Tell Greg about you</a></p>
 </div>
 <div id="content">
-<p>Something goes here.</p>
+<p><button type="button" onclick="getName()" >Enter your name</button> Hi there,
+<span id="myname"></span>
+<p><button type="button" onclick="userName()" >Enter a username</button> Username: 
+<span id="myUsername"></span>
+<p><button onclick="seeAvatar()">See the avatar choices</button></p>
+<p><button onclick="selectAvatar()">Select your avatar</button> The avatar you selected is: </p>
+<span id="avatar"></span>
+</p>
 </div>
 <div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
 <a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
