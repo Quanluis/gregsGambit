@@ -20,6 +20,14 @@
     var avatar = prompt("Enter the avatar you want", "")
     document.getElementById('avatar').innerHTML = avatar
   }
+  function seeDwellings(){
+    window.open('dwellings.html')
+  }
+  function selectDwellings(){
+    var dwelling = prompt("Enter the dwelling you want", "")
+    document.getElementById('dwelling').innerHTML = dwelling
+  }
+
 
 </script>
 </head>
@@ -48,6 +56,9 @@
 <p><button onclick="seeAvatar()">See the avatar choices</button></p>
 <p><button onclick="selectAvatar()">Select your avatar</button> The avatar you selected is: </p>
 <span id="avatar"></span>
+<p><button onclick="seeDwellings()">See your home choices</button></p>
+<p><button onclick="selectDwellings()">Select your avatar home</button> The avatar home you selected is: </p>
+<span id="dwelling"></span>
 </p>
 </div>
 <div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
