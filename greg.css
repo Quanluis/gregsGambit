@@ -122,3 +122,8 @@ td {
  font-size: 14px;
   color: #88ffff;
 }
+
+#gameButton {
+  margin: auto;
+  display: block;
+}
