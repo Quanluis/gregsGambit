@@ -13,37 +13,44 @@
         // variables
 
         var msg = prompt("Enter your message", " ")
-        var newMsg = "";
+        var newMsg = " ";
         var upCaseCode = 155;
         var newCode = 0;
         var lowCaseCode = 219;
         var specialCode = 3;
 
-        // the loop encode each letter in the message sting
+            // the loop encode each letter in the message sting
 
         for (var j = 0; j < msg.length; j++){
 
             // Check for uppercase letters and encode them 
 
             if((msg.charCodeAt(j)>= 65) &&  (msg.charCodeAt(j) <= 90)){
-                newcode = (upCaseCode - msg.charCodeAt(j))
+                newcode = (upCaseCode - msg.charCodeAt(j));
             }
-            else 
+             
             // Check for lowecase letters and encode them.
 
             if(msg.charCodeAt(j)>= 97 && (msg.charCodeAt(j) <= 122)){
-                newcode = (lowCaseCode - msg.charCodeAt(j))
+                newcode = (lowCaseCode - msg.charCodeAt(j));
             }
-            else 
+             
             // Check for numbers and special characters and encode them
 
-            if(msg.charCodeAt(j) > 90 && msg.charCodeAt(j) < 97 || msg.charCodeAt(j) < 65){
-                newcode = (msg.charCodeAt(j) + specialCode)
+            if(((msg.charCodeAt(j)> 90) && (msg.charCodeAt(j) < 97)) ||
+            (msg.charCodeAt(j) < 65)){
+                newCode = (msg.charCodeAt(j)) + specialCode;
             }
+            // add each encoded character to the new message 
+
+            newMsg = newMsg + " " + String.fromCharCode(newCode);
+
+            
 
         }
-        // display the encode message on the web page.
-        document.getElementById("secret").innerHTML = ("<h2>" +  newMsg + "</h2>");
+            // display the encode message on the web page.
+
+            document.getElementById("secret").innerHTML = ("<h2>" +  newMsg + "</h2>");
             
             // decide if orginal message should be shown.
             
@@ -77,9 +84,9 @@
 </div>
 <div id="content">
 <h2>Write a message and encode it.</h2>
-<p><input type="button" value="Enter your message." onclick="encodeIt();" /></p>
+<p><input type="button" id="encode" value="Enter your message." onclick="encodeIt();" /></p>
 <table cellPadding = "2" width = "90" align="center" border="1">
-    <tr><td align="center" id="secret"> Encode message </td> </tr>
+    <tr><td align="center" id="secret"><p>encoded message</p> </td> </tr>
     <tr><td align="center" id="message">&nbsp;</td></tr>
 </table>
 </div>
