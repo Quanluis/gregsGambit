@@ -8,7 +8,8 @@
 <script>
 
     function encodeIt(){
-        document.getElementById("message").innerHTML = ('<h2> &nbsp </h2>')
+
+        document.getElementById("message").innerHTML = ("<h2> &nbsp; </h2>")
 
         // variables
 
@@ -19,23 +20,26 @@
         var lowCaseCode = 219;
         var specialCode = 3;
 
-            // the loop encode each letter in the message sting
+        // the loop encode each letter in the message sting
 
         for (var j = 0; j < msg.length; j++){
 
             // Check for uppercase letters and encode them 
 
-            if((msg.charCodeAt(j)>= 65) &&  (msg.charCodeAt(j) <= 90)){
+            if((msg.charCodeAt(j) >= 65) &&  (msg.charCodeAt(j) <= 90)){
                 newcode = (upCaseCode - msg.charCodeAt(j));
             }
              
             // Check for lowecase letters and encode them.
+            else 
 
-            if(msg.charCodeAt(j)>= 97 && (msg.charCodeAt(j) <= 122)){
-                newcode = (lowCaseCode - msg.charCodeAt(j));
+            if((msg.charCodeAt(j) >= 97) && (msg.charCodeAt(j) <= 122)){
+                newCode = (lowCaseCode - msg.charCodeAt(j));
             }
              
             // Check for numbers and special characters and encode them
+
+            else
 
             if(((msg.charCodeAt(j)> 90) && (msg.charCodeAt(j) < 97)) ||
             (msg.charCodeAt(j) < 65)){
@@ -43,9 +47,7 @@
             }
             // add each encoded character to the new message 
 
-            newMsg = newMsg + " " + String.fromCharCode(newCode);
-
-            
+            newMsg = newMsg + " " + String.fromCharCode(newCode);   
 
         }
             // display the encode message on the web page.
