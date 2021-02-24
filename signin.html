@@ -4,6 +4,49 @@
 <title>Greg's Gambits | Player Inventory </title>
 <link href="greg.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+
+
+    function funnel(button){
+
+        function displayName(name){
+
+            var real = document.getElementById('name').value;
+
+            document.getElementById('real_name').innerHTML = real;
+
+            };
+
+        function displayUsername(username){
+
+            var user = document.getElementById('username').value;
+
+            document.getElementById('user_name').innerHTML = user;
+
+            }
+
+        function points(points){
+
+        var point = document.getElementById('points').value;
+
+        document.getElementById('player_points').innerHTML = point;
+
+            };
+
+
+        displayName();
+        displayUsername();
+        points();
+
+    }
+
+
+
+    
+
+
+
+</script>
 </head>
 <body>
 <div id="container">
@@ -87,19 +130,25 @@
                     </div>
 
                     <h3>Your information</h3>
-                    Your name: <span></span>
-                    Username: <span></span>
-                    player points: <span></span>
-                    Avatar: <span></span>
-                    weapons: <span></span>
-                    Items: <span></span>
+                    Your name: <span id = "real_name"></span> <br> <br>
+                    Username: <span id= "user_name"></span> <br> <br>
+                    player points: <span id="player_points"></span> <br> <br>
+                    Avatar: <span id="avatar"><span id="avatar_img"></span></span> <br> <br>
+                    weapons: 
+                    <span id="weapons_0"></span>
+                    <span id="weapons_1"></span>
+                    <span id="weapons_2"></span>
+                         <br> <br>   
+                    Items:
+                    <span id="items_0"></span>
+                    <span id="items_1"></span>
+                    <span id="items_2"></span>
 
                 </div>
-                <button type="reset">Reset Info</button>
-                <button type="submit">Submit</button>
             </div>
         </form>
-        <form action=""></form>
+        <button onclick="" type="reset">Reset Info</button>
+        <button id="button" onclick="funnel()">Submit</button>
     </div>
 </div>
 <div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
