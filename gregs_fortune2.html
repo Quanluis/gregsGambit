@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Madame Vadoma can tell your fortune.</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+
+function rollFortune(){
+
+        var num = 0;
+        var roll1 = "You will meet your soul mate very soon.";
+        var roll2 = "You can get an A in this class if you work very hard.";
+        var roll3 = "A good job is in your future.";
+        var roll4 = "No one likes a show"
+        var roll5 = "Dont believe everything you read";
+        var roll6 = "You will be blessed today";
+        var roll7 = "Today will be a tough day..";
+        var roll8 = "A relaxing day is upon you.";
+        var roll9 = "You dont really believe this works do you?"
+
+        num = (Math.floor(Math.random()*10)) + 1;
+        switch(num){
+
+            case 1:
+                document.getElementById('content').innerHTML = roll1;
+                break;
+            case 2:
+                document.getElementById('content').innerHTML = roll2;
+                break;
+            case 3:
+                document.getElementById('content').innerHTML = roll3;
+                break;  
+            case 4:
+                document.getElementById('content').innerHTML = roll4;
+                break;
+            case 5:
+                document.getElementById('content').innerHTML = roll5;
+                break;
+            case 6:
+                document.getElementById('content').innerHTML = roll6;
+                break;
+            case 7:
+                document.getElementById('content').innerHTML = roll7;
+                break;
+            case 8:
+                document.getElementById('content').innerHTML = roll8;
+                break;
+            case 9:
+                document.getElementById('content').innerHTML = roll9;
+                break;
+            case 10:
+                document.getElementById('content').innerHTML = roll10;
+                break;
+        }
+}
+    
+</script>   
+</head>
+<body>
+<div id="container">
+
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Madame Vadoma can tell your fortune. </em></h1>
+  
+ <h2 align ="center"><em>Seek your fate if you dare...</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutyou.html">Tell Greg about you</a></p>
+  <a href="gregs_tales.html">Gregs Tales</a>
+</div>
+<div id="content">
+   <p class="floatright"> Madame Vadoma <br> <br>
+   <img class="floatright" src="images/madame.jpg" width="100px" height="100px"></p>
+    <p>&nbsp;</p>
+    <p><input type="button" value="Roll fortune." onclick="rollFortune();"></p>
+    <p>&nbsp;</p>
+    
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
+</div>
+</body>
+</html>

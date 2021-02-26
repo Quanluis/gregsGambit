@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Unbreakable secret message encoder.</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+
+    function encodeIt(){
+        document.getElementById("message").innerHTML = ("<h2> &nbsp; </h2>")
+
+        // variables
+
+        var msg = prompt("Enter your message", " ")
+        var newMsg = " ";
+        var upCaseCode = 155;
+        var newCode = 0;
+        var lowCaseCode = 219;
+        var specialCode = 3;
+
+            // the loop encode each letter in the message sting
+
+        for (var j = 0; j < msg.length; j++){
+
+            // Check for uppercase letters and encode them using the Math.random() function. 
+
+            if((msg.charCodeAt(j) >= 65) &&  (msg.charCodeAt(j) <= 90)){
+                newcode = Math.random() * (upCaseCode  - msg.charCodeAt(j));
+            }
+             
+            // Check for lowecase letters and encode them using the Math.random() function.
+            else 
+
+            if((msg.charCodeAt(j) >= 97) && (msg.charCodeAt(j) <= 122)){
+                newCode = Math.random() * (lowCaseCode - msg.charCodeAt(j));
+            }
+             
+            // Check for numbers and special characters and encode them using the Math.random() function.
+
+            else
+
+            if(((msg.charCodeAt(j)> 90) && (msg.charCodeAt(j) < 97)) ||
+            (msg.charCodeAt(j) < 65)){
+                newCode = Math.random() * (msg.charCodeAt(j)) + specialCode;
+            }
+
+            // add each encoded character to the new message 
+
+            newMsg = newMsg + " " + String.fromCharCode(newCode);
+
+        }
+            // display the encode message on the web page.
+
+            document.getElementById("secret").innerHTML = ("<h2>" +  newMsg + "</h2>");
+            
+            // decide if orginal message should be shown.
+            
+            var choice = prompt("Do you want the original message displayed? Yes or no?", " ");
+
+           if((choice.charAt(0) == 'y') || (choice.charAt(0) == 'Y')){
+               document.getElementById("message").innerHTML = ("<h2>" + msg + "</h2>");
+           }
+    }
+
+</script>
+
+</head>
+<body>
+<div id="container">
+
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Greg's Gambits </em></h1>
+  
+ <h2 align ="center"><em> Games for Everyone!</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutyou.html">Tell Greg about you</a></p>
+  <a href="gregs_tales.html">Gregs Tales</a>
+</div>
+<div id="content">
+<h2>Unbreakable secret message encoder.</h2>
+<p><input type="button" id="encode" value="Enter your message." onclick="encodeIt();" /></p>
+<table cellPadding = "2" width = "90" align="center" border="1">
+    <tr><td align="center" id="secret"><p>encoded message</p> </td> </tr>
+    <tr><td align="center" id="message">&nbsp;</td></tr>
+</table>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
+</div>
+</body>
+</html>

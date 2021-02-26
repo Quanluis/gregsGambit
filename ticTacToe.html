@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tictactoe.css">
+    <title>Document</title>
+    <script>
+
+        var turn = 1;
+        
+        function playerAction(elem){
+
+            if(turn == 1){
+                elem.innerHTML = "X"
+                turn = 2;
+            }
+            else if(turn == 2){
+                elem.innerHTML = "O"
+                turn = 1;
+            }     
+        }
+
+    </script>
+</head>
+<body>
+
+    <script>
+
+    </script>
+
+    <h1>Tic tac toe</h1>
+
+    <div class="messagesection" id="messagesection"></div>
+
+    <div class="gameboard">
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+        </div>
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"> </div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+        </div>
+
+        <div class="row">
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"></div>
+            <div class="col" onclick="playerAction(this)"   ></div>
+        </div>
+    </div>
+</body>
+</html>

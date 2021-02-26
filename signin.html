@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Greg's Gambits | Player Inventory </title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+
+    function funnel(button){
+
+        function displayName(name){
+
+            var real = document.getElementById('name').value;
+
+            document.getElementById('real_name').innerHTML = real;
+
+            };
+
+        function displayUsername(username){
+
+            var user = document.getElementById('username').value;
+
+            document.getElementById('user_name').innerHTML = user;
+
+            }
+
+        function points(points){
+
+        var point = document.getElementById('points').value;
+
+        document.getElementById('player_points').innerHTML = point;
+
+            };
+
+
+        function pickAvatar(){
+
+            var bunny = document.getElementById('bunny');
+            var elf = document.getElementById('elf');
+            var ghost = document.getElementById('ghost');
+            var princess = document.getElementById('princess');
+            var wizard = document.getElementById('wizard');
+             
+            if(bunny.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Bunny </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/bunny.jpg' />");
+            }
+            else if (elf.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Elf </h3>");
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/elf.jpg' />");
+            }else if (ghost.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Ghost </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/ghost.jpg' />");
+            }else if(princess.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Princess </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/princess.jpg' />");
+            }else if(wizard.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Wizard </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/wizard.jpg' />");
+                
+            }
+
+        }
+
+        function weapons(){
+
+            var i = 0; var j = 0; var k = 0;
+            var weapon0 = ""; var weapons1 = ""; var weapons2= "";
+
+            for(i = 0; i <= 9; i++){
+
+                if (document.getElementById("w"+ i).checked == true){
+
+                    weapons_0 = document.getElementById('w' + i).value;
+                    document.getElementById("weapons_0").innerHTML = weapons_0;
+                    break;
+
+                }
+
+            }
+
+            for (j = (i + 1); j <= 9; j++){
+
+                if(document.getElementById("w2").checked == true){
+
+                    weapons_1 = document.getElementById('w' + j).value;
+                    document.getElementById('weapons_1').innerHTML = weapons_1;
+                    break;
+
+                }
+
+            } 
+            for (k = (j + 1); k <= 9; k++){
+
+                if(document.getElementById("w" + k).checked == true){
+
+                weapons_2 = document.getElementById('w' + k).value;
+                document.getElementById('weapons_2').innerHTML = weapons_2;
+                break;
+
+        }
+
+    }
+
+        }
+
+        displayName();
+        displayUsername();
+        points();
+        pickAvatar();
+        pickWeapons();
+
+  }
+
+</script>
+</head>
+<body>
+<div id="container">
+
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Greg's Gambits </em></h1>
+  
+ <h2 align ="center"><em> Games for Everyone!</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutyou.html">Tell Greg about you</a></p>
+  <a href="gregs_tales.html">Gregs Tales</a>
+</div>
+<div id="content">
+    <h1>Tell Greg about you.</h1>
+    <div id = "firstForm">
+        <form id = "form1" action="form1">
+            <fieldset>
+                <h2>Enter the following information: </h2>
+                <p>Your name: </p>
+                <input type="text" name="" id="name">
+                <p>Your Username: </p>
+                <input type="text" name="" id="username">
+                <p>Points to date: </p>
+                <input type="text" name="" id="points">
+            </fieldset>
+            <div>
+                <fieldset>
+                <table width = "100%" border="2"> </br>
+                    <tr><td colspan="5" class="nobdr"><h2>Your avatar:</h2></td></tr>
+                    <tr>
+                        <td class="nobdr"><img src="./images/bunny.jpg" alt="" srcset=""></td>
+                        <td class="nobdr"><img src="./images/elf.jpg" alt="" srcset=""></td>
+                        <td class="nobdr"><img src="./images/ghost.jpg" alt="" srcset=""></td>
+                        <td class="nobdr"><img src="./images/princess.jpg" alt="" srcset=""></td>
+                        <td class="nobdr"><img src="./images/wizard.jpg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td class="nobdr"><input type="radio" name="avatar" id="bunny" value="Bunny" onclick="pickAvatar('bunny')">Bunny</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="elf" value="Elf" onclick="pickAvatar('elf')">Elf</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="ghost" value="Ghost" onclick="pickAvatar('ghost')">Ghost</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="princess" value="Princess" onclick="pickAvatar('princess')">Princess</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="wizard" value="Wizard" onclick="pickAvatar('wizard')">Wizard</td>
+                    </tr>
+                </table>
+            </fieldset>
+                <div class="row">
+                    <div class="column">
+                        <fieldset>
+                            <h3>Select five items to carry with you on your journeys.</h3>
+                            <input type="checkbox" name="items" id="s1" value="3 day food supply"/>3 day food supply.</br>
+                            <input type="checkbox" name="items" id="s2" value="backpack"/>Backpack</br>
+                            <input type="checkbox" name="items" id="s3" value="Kevlar vest"/>Kevlar vest</br>
+                            <input type="checkbox" name="items" id="s4" value="3 day supply of water"/>3 day supply of water</br>
+                            <input type="checkbox" name="items" id="s5" value="fire starter"/>Fire starter</br>
+                            <input type="checkbox" name="items" id="s6" value="tent"/>Tent</br>
+                            <input type="checkbox" name="items" id="s7" value="first aid kit"/>First aid kit</br>
+                            <input type="checkbox" name="items" id="s8" value="warm jacket"/>Warm jacket</br>
+                            <input type="checkbox" name="items" id="s9" value="socks"/>3 pairs of socks</br>
+                            <input type="checkbox" name="items" id="s10" value="pen and notebook"/>Pen and notebook</br>
+                        </fieldset>
+                    </div>
+                    <div class="column">
+                        <fieldset>
+                            <h3>Select three weapons to help you in your quest.</h3>
+                            <input type="checkbox" name="weapons" id="w1" value="Sword"/>Sword</br>
+                            <input type="checkbox" name="weapons" id="w2" value="slingshot"/>Slingshot</br>
+                            <input type="checkbox" name="weapons" id="w3" value="shield"/>Shield</br>
+                            <input type="checkbox" name="weapons" id="w4" value="bow"/>Bow and 10 arrows</br>
+                            <input type="checkbox" name="weapons" id="w5" value="3 magic rocks"/>3 magic rocks</br>
+                            <input type="checkbox" name="weapons" id="w6" value="knife"/>Knife</br>
+                            <input type="checkbox" name="weapons" id="w7" value="Staff"/>Staff</br>
+                            <input type="checkbox" name="weapons" id="w8" value="Wizard's Wand"/>Wizard's Wand</br>
+                            <input type="checkbox" name="weapons" id="w9" value="extra"/> 10 Extra arrows</br>
+                            <input type="checkbox" name="weapons" id="w10" value="cloak"/>Cloak of invisibility</br>
+
+                            <input type="button" onclick="weapons()" value="Enter my selection">
+                        </fieldset>
+                    </div>
+
+                    <h3>Your information</h3>
+                    Your name: <span id = "real_name"></span> <br> <br>
+                    Username: <span id= "user_name"></span> <br> <br>
+                    player points: <span id="player_points"></span> <br> <br>
+                    Avatar: <span id="myAvatar"></span><span id="avatar_img"></span> <br> <br>
+                    weapons: 
+                    <span id="weapons_0"></span>
+                    <span id="weapons_1"></span>
+                    <span id="weapons_2"></span>
+                         <br> <br>   
+                    Items:
+                    <span id="items_0"></span>
+                    <span id="items_1"></span>
+                    <span id="items_2"></span>
+
+                </div>
+            </div>
+        </form>
+        <button onclick="" type="reset">Reset Info</button>
+        <button id="button" onclick="funnel()">Submit</button>
+    </div>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
+</div>
+</body>
+</html>

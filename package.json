@@ -1,0 +1,20 @@
+{
+  "name": "gregsgambit",
+  "version": "1.0.0",
+  "description": "A gaming website, part of my internet programming one course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quanluis/gregsGambit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quanluis/gregsGambit/issues"
+  },
+  "homepage": "https://github.com/Quanluis/gregsGambit#readme"
+}

@@ -127,3 +127,12 @@ td {
   margin: auto;
   display: block;
 }
+.column {
+  width: 50%;
+  float: left;
+}
+.row ::after {
+  content: "";
+  display: table;
+  clear: both;
+}
