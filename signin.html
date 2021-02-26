@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
 
-
     function funnel(button){
 
         function displayName(name){
@@ -34,17 +33,84 @@
             };
 
 
-        displayName();
-        displayUsername();
-        points();
+        function pickAvatar(){
+
+            var bunny = document.getElementById('bunny');
+            var elf = document.getElementById('elf');
+            var ghost = document.getElementById('ghost');
+            var princess = document.getElementById('princess');
+            var wizard = document.getElementById('wizard');
+             
+            if(bunny.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Bunny </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/bunny.jpg' />");
+            }
+            else if (elf.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Elf </h3>");
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/elf.jpg' />");
+            }else if (ghost.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Ghost </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/ghost.jpg' />");
+            }else if(princess.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Princess </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/princess.jpg' />");
+            }else if(wizard.checked == true){
+                document.getElementById('myAvatar').innerHTML = ("<h3> Wizard </h3>")
+                document.getElementById('avatar_img').innerHTML = ("<img src = './images/wizard.jpg' />");
+                
+            }
+
+        }
+
+        function weapons(){
+
+            var i = 0; var j = 0; var k = 0;
+            var weapon0 = ""; var weapons1 = ""; var weapons2= "";
+
+            for(i = 0; i <= 9; i++){
+
+                if (document.getElementById("w"+ i).checked == true){
+
+                    weapons_0 = document.getElementById('w' + i).value;
+                    document.getElementById("weapons_0").innerHTML = weapons_0;
+                    break;
+
+                }
+
+            }
+
+            for (j = (i + 1); j <= 9; j++){
+
+                if(document.getElementById("w2").checked == true){
+
+                    weapons_1 = document.getElementById('w' + j).value;
+                    document.getElementById('weapons_1').innerHTML = weapons_1;
+                    break;
+
+                }
+
+            } 
+            for (k = (j + 1); k <= 9; k++){
+
+                if(document.getElementById("w" + k).checked == true){
+
+                weapons_2 = document.getElementById('w' + k).value;
+                document.getElementById('weapons_2').innerHTML = weapons_2;
+                break;
+
+        }
 
     }
 
+        }
 
+        displayName();
+        displayUsername();
+        points();
+        pickAvatar();
+        pickWeapons();
 
-    
-
-
+  }
 
 </script>
 </head>
@@ -80,23 +146,25 @@
                 <input type="text" name="" id="points">
             </fieldset>
             <div>
+                <fieldset>
                 <table width = "100%" border="2"> </br>
                     <tr><td colspan="5" class="nobdr"><h2>Your avatar:</h2></td></tr>
                     <tr>
-                        <td class="nobdr"><img src="./images/bunny_ch01.jpg" alt="" srcset=""></td>
+                        <td class="nobdr"><img src="./images/bunny.jpg" alt="" srcset=""></td>
                         <td class="nobdr"><img src="./images/elf.jpg" alt="" srcset=""></td>
                         <td class="nobdr"><img src="./images/ghost.jpg" alt="" srcset=""></td>
                         <td class="nobdr"><img src="./images/princess.jpg" alt="" srcset=""></td>
                         <td class="nobdr"><img src="./images/wizard.jpg" alt=""></td>
                     </tr>
                     <tr>
-                        <td class="nobdr"><input type="radio" name="avatar" id="bunny" value="Bunny" onclick="pickAvatar('bunny')" >Bunny</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="bunny" value="Bunny" onclick="pickAvatar('bunny')">Bunny</td>
                         <td class="nobdr"><input type="radio" name="avatar" id="elf" value="Elf" onclick="pickAvatar('elf')">Elf</td>
                         <td class="nobdr"><input type="radio" name="avatar" id="ghost" value="Ghost" onclick="pickAvatar('ghost')">Ghost</td>
                         <td class="nobdr"><input type="radio" name="avatar" id="princess" value="Princess" onclick="pickAvatar('princess')">Princess</td>
-                        <td class="nobdr"><input type="radio" name="avaar" id="wizard" value="Wizard" onclick="pickAvatar('wizard')">Wizard</td>
+                        <td class="nobdr"><input type="radio" name="avatar" id="wizard" value="Wizard" onclick="pickAvatar('wizard')">Wizard</td>
                     </tr>
                 </table>
+            </fieldset>
                 <div class="row">
                     <div class="column">
                         <fieldset>
@@ -126,6 +194,8 @@
                             <input type="checkbox" name="weapons" id="w8" value="Wizard's Wand"/>Wizard's Wand</br>
                             <input type="checkbox" name="weapons" id="w9" value="extra"/> 10 Extra arrows</br>
                             <input type="checkbox" name="weapons" id="w10" value="cloak"/>Cloak of invisibility</br>
+
+                            <input type="button" onclick="weapons()" value="Enter my selection">
                         </fieldset>
                     </div>
 
@@ -133,7 +203,7 @@
                     Your name: <span id = "real_name"></span> <br> <br>
                     Username: <span id= "user_name"></span> <br> <br>
                     player points: <span id="player_points"></span> <br> <br>
-                    Avatar: <span id="avatar"><span id="avatar_img"></span></span> <br> <br>
+                    Avatar: <span id="myAvatar"></span><span id="avatar_img"></span> <br> <br>
                     weapons: 
                     <span id="weapons_0"></span>
                     <span id="weapons_1"></span>
