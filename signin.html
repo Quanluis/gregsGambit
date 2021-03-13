@@ -6,6 +6,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script>
 
+
+        function weapons(){
+
+        var i = 0; var j = 0; var k = 0;
+        var weapons0 = ""; var weapons1 = ""; var weapons2= "";
+
+        for(i = 0; i <= 9; i++){
+
+        if (document.getElementById("w1").checked == true){
+
+        weapons_0 = document.getElementById('w' + i).value;
+        document.getElementById("weapons_0").innerHTML = weapons_0;
+        break;
+
+        }
+
+        }
+
+        for (j = (i + 1); j <= 9; j++){
+
+        if(document.getElementById("w2").checked == true){
+
+            weapons_1 = document.getElementById('w' + j).value;
+            document.getElementById('weapons_1').innerHTML = weapons_1;
+            break;
+
+        }
+
+        } 
+        for (k = (j + 1); k <= 9; k++){
+
+            if(document.getElementById("w" + k).checked == true){
+
+            weapons_2 = document.getElementById('w' + k).value;
+            document.getElementById('weapons_2').innerHTML = weapons_2;
+            break;
+
+        }
+
+    }}
+
     function funnel(button){
 
         function displayName(name){
@@ -60,57 +101,15 @@
                 
             }
 
+            displayName();
+            displayUsername();
+            points();
+            pickAvatar();
+        
         }
-
-        function weapons(){
-
-            var i = 0; var j = 0; var k = 0;
-            var weapon0 = ""; var weapons1 = ""; var weapons2= "";
-
-            for(i = 0; i <= 9; i++){
-
-                if (document.getElementById("w"+ i).checked == true){
-
-                    weapons_0 = document.getElementById('w' + i).value;
-                    document.getElementById("weapons_0").innerHTML = weapons_0;
-                    break;
-
-                }
-
-            }
-
-            for (j = (i + 1); j <= 9; j++){
-
-                if(document.getElementById("w2").checked == true){
-
-                    weapons_1 = document.getElementById('w' + j).value;
-                    document.getElementById('weapons_1').innerHTML = weapons_1;
-                    break;
-
-                }
-
-            } 
-            for (k = (j + 1); k <= 9; k++){
-
-                if(document.getElementById("w" + k).checked == true){
-
-                weapons_2 = document.getElementById('w' + k).value;
-                document.getElementById('weapons_2').innerHTML = weapons_2;
-                break;
-
-        }
-
-    }
-
-        }
-
-        displayName();
-        displayUsername();
-        points();
-        pickAvatar();
-        pickWeapons();
-
+        weapons();
   }
+  
 
 </script>
 </head>
@@ -195,7 +194,7 @@
                             <input type="checkbox" name="weapons" id="w9" value="extra"/> 10 Extra arrows</br>
                             <input type="checkbox" name="weapons" id="w10" value="cloak"/>Cloak of invisibility</br>
 
-                            <input type="button" onclick="weapons()" value="Enter my selection">
+                            <button type="button" onclick="weapons()">Show</button>
                         </fieldset>
                     </div>
 
