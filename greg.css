@@ -136,4 +136,17 @@ td {
   display: table;
   clear: both;
 }
+.square {
+  width: auto;
+  height: 8rem;
+  image-rendering: inherit;
+}
+.player {
+  height: 8rem;
+  width: 8rem;
+}
+.gold {
+  height: 7rem;
+  width: auto;
+}
 

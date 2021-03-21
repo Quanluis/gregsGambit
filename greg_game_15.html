@@ -36,12 +36,13 @@
 
     function doClick(row, col){
 
+        swapped = false; 
+
         var top = row - 1;
         var bottom = row + 1;
         var left = col - 1;
         var right = col + 1;
         
-        swapped = false; 
 
         if(top != -1 && cells[top][col].innerHTML == "")
                 swap(cells[row][col], cells[top][col]);
@@ -87,6 +88,23 @@
         swapped = true; 
         secondCell.innerHTML = firstCell.innerHTML;
         firstCell.innerHTML = "";
+    }
+
+    function checkWinner(){
+
+        var win = true;
+        for(var i = 0; i <4; i++){
+            for(var j = 0; j < 4; j++){
+                if(!(cells[i][j].innerHTML == i * 4 + j + 1))
+                    if(!(i == 3 && j == 3))
+                        win = false;
+            }
+        }
+        if(win){
+            alert("Congrats you won!")
+            if(window.prompt('Play again?, yes'))
+            placeValues();
+        }
     }
 
 
