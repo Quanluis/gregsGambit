@@ -43,24 +43,19 @@
         player[1] = 0;
         generatebombs();
     }
-    
-    function backgroundImages()
-    {
-        for (var rows = 0; rows < 4; rows++)
-        {
-            for (var cols = 0; cols < 4; cols++)
-            {
-                if (rows == 0 && cols == 0)
-                    cells[rows][cols].innerHTML = ("<img class='player' src='images/leprechaun.png'/>");
-                else if (rows == 3 && cols == 3)
-                    cells[rows][cols].innerHTML = ("<img class='gold' src='images/potOfGold.png'/>");
-                else
-                cells[rows][cols].innerHTML = ("<img class='square' src='images/black_square.jpg' />");
-                 
-            }
-        }
-    }
 
+    function generatebombs()
+    {
+        do{
+            bomb1[1] = Math.floor(Math.random() * 3 + 2);
+            bomb2[1] = Math.floor(Math.random() * 2);
+            bomb2[0] = Math.floor(Math.random() * 2);
+            bomb3[0] = Math.floor(Math.random() * 3 + 1);
+            bomb4[1] = Math.floor(Math.random() * 2);
+
+        } while (bomb1[1] == 2 && bomb2[1] == 1 && bomb3[0] == 1 && bomb3[1] == 0 && bomb2[1] == 1)
+    }
+    
     function doClick(row, col)
     {
         var top = row - 1;
@@ -114,18 +109,13 @@
         winCheck();
     }
 
-    function generatebombs()
+    function swap(targetRow, playerCol)
     {
-        do{
-            bomb1[1] = Math.floor(Math.random() * 3 + 2);
-            bomb2[1] = Math.floor(Math.random() * 2);
-            bomb2[0] = Math.floor(Math.random() * 2);
-            bomb3[0] = Math.floor(Math.random() * 3 + 2);
-            bomb4[1] = Math.floor(Math.random() * 2);
-
-        } while (bomb1[1] == 2 && bomb2[1] == 1 && bomb3[0] == 1 && bomb3[1] == 0 && bomb2[1] == 1)
+        var playerCell = cells[targetRow][playerCol];
+        var currentCell = cells[player[0]][player[1]];
+        playerCell.innerHTML = currentCell.innerHTML;
+        currentCell.innerHTML = ("<img class = 'square' src='images/black_square.jpg'/>");
     }
-
 
     function checkbomb(row, col)
     {
@@ -151,15 +141,22 @@
             bomb = false;
     }
 
-
-    function swap(targetRow, playerCol)
+    function backgroundImages()
     {
-        var playerCell = cells[targetRow][playerCol];
-        var currentCell = cells[player[0]][player[1]];
-        playerCell.innerHTML = currentCell.innerHTML;
-        currentCell.innerHTML = ("<img class = 'square' src='images/black_square.jpg'/>");
+        for (var rows = 0; rows < 4; rows++)
+        {
+            for (var cols = 0; cols < 4; cols++)
+            {
+                if (rows == 0 && cols == 0)
+                    cells[rows][cols].innerHTML = ("<img class='player' src='images/leprechaun.png'/>");
+                else if (rows == 3 && cols == 3)
+                    cells[rows][cols].innerHTML = ("<img class='gold' src='images/potOfGold.png'/>");
+                else
+                cells[rows][cols].innerHTML = ("<img class='square' src='images/black_square.jpg' />");
+                 
+            }
+        }
     }
-
 
     function winCheck()
     {
