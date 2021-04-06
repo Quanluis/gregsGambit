@@ -4,14 +4,15 @@
 <title>Greg's Gambits</title>
 <link href="greg.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="gregBoggle.js"></script>
 </head>
 <body>
 <div id="container">
 
  <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
- <h1 id="logo"><em>Greg's Gambits </em></h1>
+ <h1 id="logo"><em>Greg's boggle</em></h1>
   
- <h2 align ="center"><em>PLay a game.</em></h2>
+ <h2 align ="center"><em> Games for Everyone!</em></h2>
 
 <p>&nbsp;</p>
 <div id="nav">
@@ -21,21 +22,22 @@
   <a href="signin.html">Sign In</a>
   <a href="contact.html">Contact Us</a></p>
   <a href="aboutyou.html">Tell Greg about you</a></p>
+  <a href="gregs_tales.html">Gregs Tales</a>
 </div>
 <div id="content">
-    <table>
-        <tr>
-            <td><a href="gregs_tales.html">Gregs tales</a></td>
-            <td><a href="gregs_fortune.html">Madame Vadoma sees all!</a></td>
-            <td><a href="gregs_fortune2.html">Madame Vadoma can tell your fortune.</a></td>
-            <td><a href="gregsEncoder.html"> Gregs Encoder</a></td>
-            <td><a href="gregsEncoder2.html">Secret message encoder</a></td>
-            <td><a href="ticTacToe.html">Tic Tac Toe</a></td>
-            <td><a href="greg_game_15.html">The Game of 15</a></td>
-            <td><a href="gregs_maze.html">Gregs Maze</a></td>
-            <td><a href="greg_boggle.html">Greg's boggle</a></td>
-        </tr>
-    </table>
+    <p>The object of the game is to create as many words as you can, in a given amount of time, from the letters shown below.
+        When you're ready to begin press the start button.
+    </p>
+    <p><input type="button" value="begin the game" onclick="boggle()"></p>
+    <h2><br> <br>Letters you can use: <br> <div id="letters">
+        &nbsp;
+    </div></h2>
+    <h2><br> <br>Words so far: <br> <div id="entries">
+        &nbsp;
+    </div></h2>
+    <h2><br> <br>Results: <br> <div id="result">
+        &nbsp;
+    </div></h2>
 </div>
 <div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
 <a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
