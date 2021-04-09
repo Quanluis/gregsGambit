@@ -1,21 +1,14 @@
 function words(x){
     switch(x){
         case 1: 
-            var word = new Array("balte", "table", "hat", "tab", 'belt', 'lab', 'eat', 'tea', 'ate',
-            'tale', 'bale', 'let', 'bet', 'teal', 'late', 'beat' );
+            var word = new Array('terse', 'trees', 'reset', 'rest', 'set');
             break;
-        case 2:
-            var word = new Array("redykboa", "keyboard", "key", 'board', 'bored', 'bore');
+        case 2: 
+            var word = new Array('urecas', 'saucer', 'causer', 'cause', 'scare', 'sauce', 'curse', 'cares', 'races', 'sea');
             break;
-        case 3: 
-            var word = new Array('dclaen', 'clan', 'clean', 'lean');
-            break
-        case 4: 
-            var word = new Array("aepinlar", "air", "airplane");
-            break
-        case 5:
-            var word = new Array("atwre", "water", "wet", 'wear', 'tear', 'war', 'rat');
-            break
+        case 3:
+            var word = new Array('Waktle','kale', 'tweak', 'talk', 'tale', 'teal', 'weak', 'leak', 'walk', 'take', 'wake'); 
+            break;
     }   
     return word;
 }
