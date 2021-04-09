@@ -5,18 +5,27 @@ function words(x){
             'tale', 'bale', 'let', 'bet', 'teal', 'late', 'beat' );
             break;
         case 2: 
-            var word = new Array("atwre", "water", "wet", 'wear', 'tear', 'war', 'rat');
+            var word = new Array('urecas', 'saucer', 'causer', 'cause', 'scare', 'sauce', 'curse', 'cares', 'races', 'sea');
             break;
         case 3:
-            var word = new Array('dclaen', 'can',);
+            var word = new Array('Waktle','kale', 'tweak', 'talk', 'tale', 'teal', 'weak', 'leak', 'walk', 'take', 'wake'); 
             break;
         case 4: 
-            var word = new Array("aepinlar", "air",);
+            var word = new Array("redykboa", "keyboard", "key", 'board', 'bored', 'bore');
             break;
         case 5: 
-            var word = new Array("redykboa", "keyboard", "key", 'board', 'bored', 'bore');
+            var word = new Array('terse', 'trees', 'reset', 'rest', 'set');
             break
-    }
+        case 6: 
+            var word = new Array('dclaen', 'clan', 'clean', 'lean');
+            break
+        case 7: 
+            var word = new Array("aepinlar", "air", "airplane");
+            break
+        case 8:
+            var word = new Array("atwre", "water", "wet", 'wear', 'tear', 'war', 'rat');
+            break
+    }   
     return word;
 }
 
@@ -60,7 +69,7 @@ function boggle()
             flag = 0;
             for(var k = 0; k < complgth; k++)
             {
-                if(playWords[i] ==  compWords[k])
+                if(playWords[i] == compWords[k])
                 {
                     
                     score++;
@@ -72,5 +81,5 @@ function boggle()
                 notAWord.push(playWords[i]);         
         }
         document.getElementById('result').innerHTML = ("Your score is " + score + " . The following entries are not valid words: <br /> " + notAWord.toString());
-    }   
+}   
 
