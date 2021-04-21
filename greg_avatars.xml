@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type = "text/xsl" href = "greg_avatars.xsl"?> 
+<!-- Greg's Gambits Avatars: the XML file -->
+<greg>
+	<avatar xmlns:bunny = "http://greg.com/bunny">
+		<name>Bunny</name>
+		<powers>hops up to 100 feet</powers>
+		<home>rabbit warren</home>
+		<carry>Easter basket</carry>
+		<partner>fox</partner>
+	</avatar>
+	<avatar xmlns:princess = "http://greg.com/princess">
+		<name>Princess</name>
+		<powers>mesmerizes anyone</powers>
+		<home>castle</home>
+		<carry>make-up case</carry>
+		<partner>knight</partner>
+	</avatar>
+	<avatar xmlns:ghost = "http://greg.com/ghost">
+		<name>Ghost</name>
+		<powers>invisibility</powers>
+		<home>haunted house</home>
+		<carry>sunglasses</carry>
+		<partner>vampire</partner>
+	</avatar>
+	<avatar xmlns:wizard = "http://greg.com/wizard">
+		<name>Wizard</name>
+		<powers>fire-maker</powers>
+		<home>a cave</home>
+		<carry>magic wand</carry>
+		<partner>black cat</partner>
+	</avatar>
+	<avatar xmlns:elf = "http://greg.com/elf">
+		<name>Elf</name>
+		<powers>super hearing</powers>
+		<home>inside an oak tree</home>
+		<carry>bow and arrow</carry>
+		<partner>dragon</partner>
+	</avatar>
+</greg>		
