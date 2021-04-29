@@ -1,45 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-    <link rel="stylesheet" href="./tictactoe.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      var turn = 1;
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="greg.css">
+<head>
+<title>Greg's Gambits</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-      function playerAction(elem) {
-        if (turn == 1) {
-          elem.innerHTML = "X";
-          turn = 2;
-        } else if (turn == 2) {
-          elem.innerHTML = "O";
-          turn = 1;
-        }
+<script>
+    var turn = 1;
+
+    function playerAction(elem) {
+      if (turn == 1) {
+        elem.innerHTML = "X";
+        turn = 2;
+      } else if (turn == 2) {
+        elem.innerHTML = "O";
+        turn = 1;
       }
-    </script>
-  </head>
-  <body>
-    <h1>Tic tac toe</h1>
 
-    <div class="messagesection" id="messagesection"></div>
+    }
 
-    <div class="gameboard">
-      <div class="row">
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-      </div>
+    function resetButton(){
+          elem.innerHTML = "";  
+        }
 
-      <div class="row">
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-      </div>
+  </script>
 
-      <div class="row">
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-        <div class="col" onclick="playerAction(this)"></div>
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+<div id="container">
+
+ <img src="images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Greg's Gambit</em></h1>
+  
+ <h2 align ="center"><em>PLay a game.</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="signin.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutyou.html">Tell Greg about you</a></p>
+</div>
+<div id="content">
+    <table class="gameBoard">
+      <form>
+        <tr>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+            <td onclick="playerAction(this)"></td>
+        </tr>
+    </table>
+    <button id="resetButton" onclick="resetButton()">Reset</button>
+  </form>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:Luis@Garzon.com">Luis@Garzon.com</a></div>
+</div>
+</body>
 </html>
