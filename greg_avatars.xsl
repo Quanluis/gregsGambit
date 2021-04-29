@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!--Example Greg Gambits Avatars: xsl file -->
 	<?xml version="1.0" encoding="UTF-8"?>
-	<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:stylesheet version="1.0" 
+						xmlns:xsl ="http://www.w3.org/1999/XSL/Transform" href = "html5.xml">
 	<xsl:output method = "html" doctype-system = "about:legacy-compat" />
 	<xsl:template match = "/">
-	</xsl:stylesheet>
 	<html>
 	<head>
 		<meta charset = "utf-8"/>
@@ -36,11 +36,11 @@
 			</tr>
 		<!-- insert each avatar's information into a table row -->
 		<xsl:for-each select = '/greg/avatar' 
-		xmlns: bunny = "http://greg.com/bunny"
-		xmlns: princess = "http://greg.com/princess"
-		xmlns: ghost = "http://greg.com/ghost"
-		xmlns: wizard = "http://greg.com/wizard"
-		xmlns: elf = "http://greg.com/elf" >
+		xmlns:bunny = "http://greg.com/bunny"
+		xmlns:princess = "http://greg.com/princess"
+		xmlns:ghost = "http://greg.com/ghost"
+		xmlns:wizard = "http://greg.com/wizard"
+		xmlns:elf = "http://greg.com/elf" >
 
 		<tr>
 		<td><xsl:value-of select = "name"/></td>
@@ -55,7 +55,7 @@
 		</tr>
 		<tr>
 			<!-- place buttons and images here and call appropriate functions -->
-			
+
 		</tr>
 		<tr>
 			<td id = "details" colspan = "5">Details</td>

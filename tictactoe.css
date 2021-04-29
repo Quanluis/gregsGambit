@@ -1,43 +1,40 @@
 body {
-    background-color: green;
-
+  background-color: green;
 }
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .messagesection {
-    height: 50px;
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-    font-size: 20px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .gameboard {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    transform: translate(-50%, -50%);
-    
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    height: 300px;
-    width: 300px;
+  transform: translate(-50%, -50%);
+
+  height: 300px;
+  width: 300px;
 }
 .row {
-    height: 32%;
+  height: 32%;
 }
 .col {
-    height: 100%;
-    width: 32%;
-    border: 2px solid white;
-    float: left;
+  height: 100%;
+  width: 32%;
+  border: 2px solid white;
+  float: left;
 
-    font-size: 70px;
-    font-weight: bolder;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-
+  font-size: 70px;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  cursor: pointer;
 }

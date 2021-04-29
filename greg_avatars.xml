@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<?xml-stylesheet type = "text/xsl" href = "greg_avatars.xsl"?> 
+<?xml-stylesheet type = "text/xsl" href = "./gregs_avatar.xsl"?> 
 <!-- Greg's Gambits Avatars: the XML file -->
 <greg>
 	<avatar xmlns:bunny = "http://greg.com/bunny">
